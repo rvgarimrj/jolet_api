@@ -1,0 +1,61 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+# Este arquivo deve ser colocado em config/locales/devise.pt-BR.yml
+
+pt-BR:
+  devise:
+    confirmations:
+      confirmed: "Email confirmado com sucesso ! Caso sua conta tenha sido criada por seu Representante, recomendamos que você altere sua senha imediatamente após seu primeiro login, por questões de segurança. Sua senha deve ser de conhecimento único e exclusivo seu. Após se conectar, para alterar sua senha clique no botão Cadastro -> Minha conta. Obrigado !"
+      send_instructions: "Obrigado por se cadastrar em nosso site. Você receberá um email contendo um link para confirmar sua conta em alguns minutos. "
+      send_paranoid_instructions: "Caso seu endereço de email já exista em nossa base, você receberá um email com instruções sobre como ativar sua conta."
+    failure:
+      already_authenticated: "Você já está conectado."
+      inactive: "Sua conta ainda não foi ativada."
+      invalid: "Email ou senha inválidos."
+      locked: "Sua conta está travada."
+      last_attempt: "Você tem mais uma tentativa antes que sua conta seja travada."
+      not_found_in_database: "Email ou senha inválidos."
+      timeout: "Para sua segurança sua sessão expirou. Por favor, faça login novamente."
+      unauthenticated: "Você precisa estar conectado, ou se cadastrar, antes de prosseguir."
+      unconfirmed: "Você precisa confirmar sua conta antes de prosseguir."
+    mailer:
+      confirmation_instructions:
+        subject: "Instruções para confirmação"
+      reset_password_instructions:
+        subject: "Instruções para reiniciar sua senha"
+      unlock_instructions:
+        subject: "Instruções para destravar sua senha"
+    omniauth_callbacks:
+      failure: "Não pudemos autenticá-lo em %{kind} por causa de \"%{reason}\"."
+      success: "Autenticado com sucesso na conta %{kind}."
+    passwords:
+      no_token: "Você não pode acessar essa página vindo do email para reiniciar sua senha. Se você está vindo do email para reiniciar sua senha, por favor, certifique-se de estar usando a URL correta."
+      send_instructions: "Você receberá um email com instruções de como reiniciar sua senha em alguns minutos."
+      send_paranoid_instructions: "Se o seu endereço de email estiver em nossa base de dados, em alguns minutos você receberá um link para recuperar sua senha em seu email."
+      updated: "Você alterou sua senha com sucesso. Você está logado."
+      updated_not_active: "Sua senha foi alterada com sucesso."
+    registrations:
+      destroyed: "Até mais! Sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve."
+      signed_up: "Bem-vindo! Você se registrou com sucesso. Dentro de alguns instantes você recebrá um email de boas vindas de nossa equipe. Verifique se o mesmo foi recebido e se não caiu em sua caixa de spam !"
+      signed_up_but_inactive: "Você se registrou com sucesso. No entanto, não podemos logá-lo, pois você ainda não ativou sua conta."
+      signed_up_but_locked: "Você se registrou com sucesso. No entanto, não podemos logá-lo, pois sua conta está travada."
+      signed_up_but_unconfirmed: "Uma mensagem de boas vindas, contendo um link de confirmação de sua conta, foi enviada para seu endereço de email. Verique sua caixa de correio. Certifique-se que o endereço 'de: ou from:' seja 'no-reply@representantevirtual.com'. Isso garante sua segurança."
+      update_needs_confirmation: "Sua conta foi atualizada, mas precisamos verificar seu endereço de email. Por favor cheque seu email e clique no link de confirmação para confirmar seu novo endereço de email."
+      updated: "Você atualizou sua conta com sucesso."
+    sessions:
+      signed_in: "Conectado com sucesso."
+      signed_out: "Desconectado com sucesso."
+      already_signed_out: "Você já está desconectado."
+    unlocks:
+      send_instructions: "Você receberá um email com instruções sobre como destravar sua conta em alguns minutos."
+      send_paranoid_instructions: "Se sua conta existir, você receberá um email com instruções sobre como destravá-la em alguns minutos."
+      unlocked: "Sua conta foi destrava com sucesso. Por favor, faça login para continuar."
+  errors:
+    messages:
+      already_confirmed: "já foi confirmada, por favor faça login"
+      confirmation_period_expired: "precisa ser confirmada dentro de %{period}, por favor peça uma nova"
+      expired: "expirou, por favor solicite uma nova"
+      not_found: "não encontrado"
+      not_locked: "não estava travada"
+      not_saved:
+        one: "1 erro impediu a gravação de %{resource}:"
+        other: "%{count} erros impediram a gravação de %{resource}:"
