@@ -1,5 +1,11 @@
 pt-BR:
   activerecord:
+    attributes:
+      user:
+        email: "E-mail"
+        password: "senha"
+        password_confirmation: "Confirmação de senha"
+        current_password: "Senha atual"
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
@@ -116,7 +122,7 @@ pt-BR:
       greater_than: deve ser maior que %{count}
       greater_than_or_equal_to: deve ser maior ou igual a %{count}
       inclusion: não está incluído na lista
-      invalid: não é válido
+      invalid: não confere
       less_than: deve ser menor que %{count}
       less_than_or_equal_to: deve ser menor ou igual a %{count}
       model_invalid: 'A validação falhou: %{errors}'
@@ -126,11 +132,11 @@ pt-BR:
       required: deve existir
       taken: já está em uso
       too_long:
-        one: 'é muito longo (máximo: 1 caracter)'
-        other: 'é muito longo (máximo: %{count} caracteres)'
+        one: 'é muito longa(o) (máximo: 1 caracter)'
+        other: 'é muito longa(o) (máximo: %{count} caracteres)'
       too_short:
-        one: 'é muito curto (mínimo: 1 caracter)'
-        other: 'é muito curto (mínimo: %{count} caracteres)'
+        one: 'é muito curta(o) (mínimo: 1 caracter)'
+        other: 'é muito curta(o) (mínimo: %{count} caracteres)'
       wrong_length:
         one: não possui o tamanho esperado (1 caracter)
         other: não possui o tamanho esperado (%{count} caracteres)

@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321162558) do
+ActiveRecord::Schema.define(version: 20170508201810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "short_name"
+    t.integer  "kind"
+    t.string   "cpf_cnpj"
+    t.string   "street"
+    t.string   "number"
+    t.string   "city"
+    t.string   "zipcode"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "state"
+    t.string   "neighborhood"
+    t.string   "phone"
+    t.string   "company_email"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
@@ -39,10 +56,14 @@ ActiveRecord::Schema.define(version: 20170321162558) do
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.string   "photo"
+    t.integer  "kind_of_user",           default: 0
+    t.integer  "company_id"
+    t.index ["company_id"], name: "index_users_on_company_id", using: :btree
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
   end
 
+  add_foreign_key "users", "companies"
 end
