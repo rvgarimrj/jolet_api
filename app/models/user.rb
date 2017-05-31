@@ -10,5 +10,4 @@ class User < ActiveRecord::Base
   enum type: [ :dono, :vendedor ]
   validates :kind_of_user, :presence => true
 
-
 end

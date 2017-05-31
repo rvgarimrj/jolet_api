@@ -6,6 +6,10 @@ pt-BR:
         password: "senha"
         password_confirmation: "Confirmação de senha"
         current_password: "Senha atual"
+      company:
+        company_name: "Nome da empresa"
+        short_name: "Nome abreviado"
+        company_email: "Email da empresa"
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

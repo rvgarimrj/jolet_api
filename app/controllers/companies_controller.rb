@@ -16,11 +16,15 @@ class CompaniesController < ApplicationController
   # POST /companies.json
   def create
     @company = Company.new(company_params)
-
-    if @company.save
+    binding.pry
+    if @company.save!
       render :show, status: :created
     else
-      render json: @company.errors, status: :unprocessable_entity
+      binding.pry
+      render json: {
+        status: 500,
+        errors: @company.erros
+      }.to_json
     end
   end
 
@@ -29,9 +33,15 @@ class CompaniesController < ApplicationController
   def update
     if @company.update(company_params)
       render :show, status: :ok
+      
     else
-      render json: @company.errors, status: :unprocessable_entity
+      render json: {
+        status: 500,
+        errors: @company.erros
+      }.to_json
+      
     end
+    
   end
 
   # DELETE /companies/1

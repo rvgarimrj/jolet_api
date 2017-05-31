@@ -7,13 +7,20 @@ class Api::V1::UsersController < ApplicationController
     begin
       if params[:company]
         if @user.company.present?
-          @user.company.update(company_params)
+              # binding.pry
+
+          @user.company.update_attributes!(company_params)
         else
-          @user.update(company: Company.create(company_params))
+        # binding.pry
+
+          # @user.update(company: Company.create(company_params))
+          company = Company.create(company_params)
+          company.save!
+          @user.update(company: company)
         end
       end
       @user.update(user_params)
-      render template: '/api/v1/users/show', status: 200
+      # render template: '/api/v1/users/show', status: 200
     rescue Exception => errors
       render json: errors, status: :unprocessable_entity
     end
